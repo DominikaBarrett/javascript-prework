@@ -1,28 +1,26 @@
-
-function playGame(playerInput){
+const playGame = function (playerInput) {
   clearMessages();
 
-function getMoveName(argMoveId) {
+ const getMOveName =function (argMoveId) {
   if(argMoveId == 1){
     return 'kamień';
   } else if(argMoveId == 2){
     return 'papier';
   } else if(argMoveId == 3){
-    return 'nozyczki'; 
+    return 'nozyczki';
   } else {
     printMessage('Nie znam ruchu o id ' + argMoveId + '.');
     return 'nieznany ruch';
   }
-	
+
 }
 
-let randomNumber = Math.floor(Math.random() * 3 + 1); // 2
-let computerMove = getMoveName(randomNumber); // papier
+let randomNumber = Math.floor(Math.random() * 3 + 1);
 
 
 console.log('Wylosowana liczba to: ' + randomNumber);
 
-function displayResult(argComputerMove, argPlayerMove){
+const displayResult =function (argComputerMove, argPlayerMove){
     printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
 
     if (argComputerMove == argPlayerMove) {
